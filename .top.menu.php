@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "Расписание",
+        "/schedule/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Корпоративные тренинги",
+        "/trainings/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Тренеры",
+        "/trainers/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Блог",
+        "/blog/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "О компании",
+        "/about/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Контакты",
+        "/contacts/",
+        Array(),
+        Array(),
+        ""
+    )
+);
+?>

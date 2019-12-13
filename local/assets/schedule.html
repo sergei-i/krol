@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Мастерская коучинга и тренинга Леонида Кроля</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+	<header class="header header_shadow">
+		<div class="container header__inner">
+			<div class="nav-toggle header__m-menu">
+				<div class="nav-toggle__bar"></div>
+			</div>
+
+			<div class="mobile-nav">
+				<ul class="mobile-nav__list">
+					<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Главная</a></li>
+					<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Расписание</a></li>
+					<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Корпоративные тренинги</a></li>
+					<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Тренеры</a></li>
+					<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Блог</a></li>
+					<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">О компании</a></li>
+					<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Контакты</a></li>
+				</ul>
+
+				<a href="#" class="mobile-nav__email email-link">info@leonidkroll.com</a>
+			</div>
+
+			<div class="header__logo">
+				<a href="#" class="logo"><img src="img/logo.svg" class="logo__img" alt="" /></a>
+				<span class="header__desc">Мастерская коучинга <br/>и тренинга Леонида Кроля</span>
+			</div>
+
+			<div class="header__nav">
+				<div class="header__contacts">
+					<a href="#" class="btn">Свяжитесь со мной</a>
+					<a href="tel:79850238285" class="phone-link">+7 (985) 023-82-85</a>
+					<a href="mailto:info@leonidkroll.com" class="email-link">info@leonidkroll.com</a>
+
+					<ul class="social-list">
+						<li class="social-list__item">
+							<a href="#" class="social-list__link social-list__link_fb">
+								<svg class="social-list__icon social-list__icon_fb"><use xlink:href="img/icons.svg#icon-fb"></svg>
+							</a>
+						</li>
+						
+						<li class="social-list__item">
+							<a href="#" class="social-list__link social-list__link_vk">
+								<svg class="social-list__icon social-list__icon_vk"><use xlink:href="img/icons.svg#icon-vk"></svg>
+							</a>
+						</li>
+						
+						<li class="social-list__item">
+							<a href="#" class="social-list__link social-list__link_ok">
+								<svg class="social-list__icon social-list__icon_ok"><use xlink:href="img/icons.svg#icon-ok"></svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="navigation">
+					<li class="navigation__item"><a href="#" class="navigation__link">Расписание</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Корпоративные тренинги</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Тренеры</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Блог</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">О компании</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+				</ul>
+			</div>
+
+			<a href="#" class="header__m-phone">+7 (985) 023-82-85</a>
+		</div>
+	</header>
+
+	<div class="wrapper p-schedule">
+		<div class="container">
+			<ul class="pagination">
+				<li class="pagination__item"><a href="#" class="pagination__link">Главная</a></li>
+				<li class="pagination__item"><a class="pagination__link">Расписание</a></li>
+			</ul>
+
+			<h1 class="title title_h1 title_center title_blue p-schedule__title">Расписание</h1>
+		</div>
+
+		<div class="container p-schedule__inner">
+
+			<div class="p-schedule__sidebar">
+				<form class="filter">
+					<fieldset class="filter__group">
+						<legend class="filter__title">Тренер</legend>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Леонид Кроль</span>
+						</label>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Павел Лебедько</span>
+						</label>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Екатерина Михайлова</span>
+						</label>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Михаил Гинзбург</span>
+						</label>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Валерий Максимов</span>
+						</label>
+					</fieldset>
+
+					<fieldset class="filter__group">
+						<legend class="filter__title">Тип тренинга</legend>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Тренинг-лаборатория</span>
+						</label>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Мастер-класс</span>
+						</label>
+
+						<label class="checkbox filter__checkbox">
+							<input type="checkbox" class="checkbox__input">
+							<span class="checkbox__text">Лекция</span>
+						</label>
+					</fieldset>
+					
+					<div class="filter__footer">
+						<button class="btn btn_shadow filter__submit">Применить</button>
+						<a href="#" class="filter__reset">Сбросить</a>
+					</div>
+				</form>
+			</div>
+			
+			<div class="p-schedule__content">
+				<div class="training training_green">
+					<div class="training__inner">
+						<span class="training__label">Тренинг</span>
+						<a href="#" class="training__title">«Переговоры. Индивидуальный стиль и драматургия»</a>
+						<p class="training__desc">Двухдневный тренинг Леонида Кроля по развитию эмпатии, интуиции, эмоционального интеллекта.</p>
+						<a href="#" class="training__more">Подробнее</a>
+
+						<div class="training__info">
+							<div class="training-date">
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-calendar"/></svg>
+									23-25 февраля ‘18
+								</span>
+								
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-clock"/></svg>
+									11:00 - 19:00
+								</span>
+							</div>
+
+							<div class="training-price">
+								<span class="training-price__text">При оплате за 14 дней до тренинга</span>
+								<span class="training-price__value">45 000 ₽</span>
+								<span class="training-price__sale">50 000 ₽</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="training__author">
+						<span class="training__avatar" style="background-image: url('pictures/blog-page.jpg');"></span>
+						
+						<div class="training__author-info">
+							<span class="training__post">Тренер</span>
+							<span class="training__name">Леонид Кроль</span>
+						</div>
+						
+						<div>
+							<a href="#" class="btn btn_shadow" data-open="modal-request">Забронировать</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="training training_red">
+					<div class="training__inner">
+						<span class="training__label">Тренинг-лаборатория Екатерины Михайловой</span>
+						<a href="#" class="training__title">«Будь по-моему!» Основы иррационального планирования</a>
+						<p class="training__desc">Задать вопросы своему личному будущему и услышать ответы предлагает Екатерина Михайлова, кандидат психологических наук</p>
+						<a href="#" class="training__more">Подробнее</a>
+
+						<div class="training__info">
+							<div class="training-date">
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-calendar"/></svg>
+									21-22 апреля‘18
+								</span>
+								
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-clock"/></svg>
+									11:00 - 19:00
+								</span>
+							</div>
+
+							<div class="training-price">
+								<span class="training-price__text">При оплате за 14 дней до тренинга</span>
+								<span class="training-price__value">30 000 ₽</span>
+								<span class="training-price__sale">35 000 ₽</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="training__author">
+						<span class="training__avatar" style="background-image: url('pictures/blog-page.jpg');"></span>
+						
+						<div class="training__author-info">
+							<span class="training__post">Тренер</span>
+							<span class="training__name">Екатерина Михайлова</span>
+						</div>
+						
+						<div>
+							<a href="#" class="btn btn_shadow" data-open="modal-request">Забронировать</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="training training_blue">
+					<div class="training__inner">
+						<span class="training__label">Тренинг</span>
+						<a href="#" class="training__title">«Переговоры. Разговорный гипноз»</a>
+						<p class="training__desc">Двухдневный тренинг Леонида Кроля по развитию эмпатии, интуиции, эмоционального интеллекта.</p>
+						<a href="#" class="training__more">Подробнее</a>
+
+						<div class="training__info">
+							<div class="training-date">
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-calendar"/></svg>
+									20 мая ‘18
+								</span>
+								
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-clock"/></svg>
+									10:00 - 18:00
+								</span>
+							</div>
+
+							<div class="training-price">
+								<span class="training-price__text">При оплате за 14 дней до тренинга</span>
+								<span class="training-price__value">10 000 ₽</span>
+								<span class="training-price__sale">15 000 ₽</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="training__author">
+						<span class="training__avatar" style="background-image: url('pictures/blog-page.jpg');"></span>
+						
+						<div class="training__author-info">
+							<span class="training__post">Тренер</span>
+							<span class="training__name">Павел Лебедько</span>
+						</div>
+						
+						<div>
+							<a href="#" class="btn btn_shadow" data-open="modal-request">Забронировать</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="training training_yellow">
+					<div class="training__inner">
+						<span class="training__label">Тренинг</span>
+						<a href="#" class="training__title">«Переговоры. Индивидуальный стиль и драматургия»</a>
+						<p class="training__desc">Двухдневный тренинг Леонида Кроля по развитию эмпатии, интуиции, эмоционального интеллекта.</p>
+						<a href="#" class="training__more">Подробнее</a>
+
+						<div class="training__info">
+							<div class="training-date">
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-calendar"/></svg>
+									23-25 февраля ‘18
+								</span>
+								
+								<span class="training-date__item">
+									<svg class="training-date__icon"><use xlink:href="img/icons.svg#icon-clock"/></svg>
+									11:00 - 19:00
+								</span>
+							</div>
+
+							<div class="training-price">
+								<span class="training-price__text">При оплате за 14 дней до тренинга</span>
+								<span class="training-price__value">45 000 ₽</span>
+								<span class="training-price__sale">50 000 ₽</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="training__author">
+						<span class="training__avatar" style="background-image: url('pictures/blog-page.jpg');"></span>
+						
+						<div class="training__author-info">
+							<span class="training__post">Тренер</span>
+							<span class="training__name">Леонид Кроль</span>
+						</div>
+						
+						<div>
+							<a href="#" class="btn btn_shadow" data-open="modal-request">Забронировать</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="p-schedule__load">
+					<a href="#" class="btn">
+						<svg class="btn__icon btn__icon_calendar"><use xlink:href="img/icons.svg#icon-load"></use></svg>
+						Показать еще
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="subscription">
+			<span class="subscription__title">Подписаться <br/>На рассылку</span>
+
+			<form class="subscription__form">
+				<input type="text" placeholder="Введите e-mail" class="subscription__input">
+				
+				<div class="subscription__btn">
+					<button class="subscription__submit btn">Подписаться</button>
+					<span class="subscription__warning">Нажимая на кнопку, Вы соглашаетесь с условиями обработки данных</span>
+				</div>
+			</form>
+		</div>
+		
+		<div class="footer__contacts">
+			<div class="footer__inner container">
+				<span class="footer-cell footer-cell_large">
+					<svg class="footer-cell__icon"><use xlink:href="img/icons.svg#icon-phone" /></svg>
+					<a href="tel:79850238285" class="footer-cell__link">+7 (985) 023-82-85</a>
+				</span>
+
+				<span class="footer-cell">
+					<svg class="footer-cell__icon"><use xlink:href="img/icons.svg#icon-mail" /></svg>
+					<a href="mailto:info@leonidkroll.com" class="footer-cell__link">info@leonidkroll.com</a>
+				</span>
+
+				<span class="footer-cell">
+					<svg class="footer-cell__icon"><use xlink:href="img/icons.svg#icon-location" /></svg>
+					<a href="mailto:info@leonidkroll.com" class="footer-cell__link">Москва, ул. Покровка, дом 31, стр. 2, подъезд с колоннами</a>
+				</span>
+
+				<ul class="social-list">
+					<li class="social-list__item">
+						<a href="#" class="social-list__link social-list__link_fb">
+							<svg class="social-list__icon social-list__icon_fb"><use xlink:href="img/icons.svg#icon-fb"></svg>
+						</a>
+					</li>
+
+					<li class="social-list__item">
+						<a href="#" class="social-list__link social-list__link_vk">
+							<svg class="social-list__icon social-list__icon_vk"><use xlink:href="img/icons.svg#icon-vk"></svg>
+						</a>
+					</li>
+
+					<li class="social-list__item">
+						<a href="#" class="social-list__link social-list__link_ok">
+							<svg class="social-list__icon social-list__icon_ok"><use xlink:href="img/icons.svg#icon-ok"></svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer__copyright container">
+			<span class="footer__left">
+				<span class="footer__copy">2018 © Мастерская коучинга и тренинга Леонида Кроля</span>
+				<a href="#" class="footer__link">Политика конфиденциальности</a>
+			</span>
+
+			<span class="footer__right">
+				Разработка сайта - <a href="#" class="footer__link"><img src="img/letsrock.svg" class="footer__lr" alt="" /></a>
+			</span>
+		</div>
+	</footer>
+
+	<div class="modals">
+		<div class="modals__back"></div>
+		<div class="modal modal_size-s" data-modal="modal-request">
+			<button class="modal__close"></button>
+			<h3 id="modal-header" class="title title_h3 title_blue title_upper title_center title_modal"></h3>
+			<div class="modal__content">
+				<p id="trening"></p>
+				<form class="form" id="modalform">
+					<input type="hidden" id="raspid" name="raspid" value="">
+					<input type="hidden" id="type-modal" name="modal" value="">
+					<div class="form__line">
+						<label class="field">
+							<span>Имя</span>
+							<input name="nam" type="text">
+						</label>
+						<label class="field">
+							<span>Фамилия</span>
+							<input name="fam" type="text">
+						</label>
+					</div>
+					<div class="form__line">
+						<label class="field">
+							<span>Телефон (с кодом страны и города)</span>
+							<input id="phone" name="phone" type="text">
+						</label>
+						<label class="field">
+							<span>E-mail</span>
+							<input name="email" type="text">
+						</label>
+					</div>
+					<div class="form__line">
+						<label class="field field_full">
+							<span>Удобный способ связи</span>
+							<select name="sposob" class="select">
+								<option>Звонок</option>
+								<option>SMS</option>
+								<option>E-mail</option>
+								<option>WhatsApp</option>
+								<option>Telegram</option>
+							</select>
+						</label>
+					</div>
+					<div class="form__line">
+						<label class="field field_full">
+							<span>Комментарий</span>
+							<textarea name="comment"></textarea>
+						</label>
+					</div>
+					<div class="form__line">
+						<label class="checkbox checkbox_form form__checkbox">
+							<input type="checkbox" checked class="checkbox__input" id="soglasen" name="soglasie" value="Да">
+							<span class="checkbox__text">Принимаю условия обработки данных и получение подтверждения брони на почту</span>
+						</label>
+						<label class="checkbox checkbox_form form__checkbox">
+							<input type="checkbox" class="checkbox__input" name="subscr"  value="Да">
+							<span class="checkbox__text">Хочу получать новости</span>
+						</label>
+					</div>
+					<button id="modal-butt" class="btn btn_shadow btn_center btn_submit">Отправить заявку</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
