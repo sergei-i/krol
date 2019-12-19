@@ -90,7 +90,7 @@ $(".modal__close").on("click", function (s) {
 });
 
 $(function () {
-    var button = $('.training__author .btn.btn_shadow');
+    var button = $('.btn.btn_shadow[data-open="modal-request"]');
 
     button.on('click', function (e) {
         var id = e.target.getAttribute('data-id');
@@ -98,7 +98,6 @@ $(function () {
         var input = $('#trainer-id');
         input.val(id);
     });
-
 
     $('#modalform').submit(function () {
         var data = $(this).serialize();
@@ -127,3 +126,4 @@ $(function () {
         return false;
     })
 });
+

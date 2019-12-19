@@ -25,14 +25,14 @@ $APPLICATION->SetTitle("О компании");
             );?>
 
             <div class="p-about__btns">
-                <a href="#" class="btn p-about__btn">
+                <a href="/schedule/" class="btn p-about__btn">
                     <svg class="btn__icon btn__icon_calendar">
                         <use xlink:href="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/icons.svg#icon-calendar"></use>
                     </svg>
                     Расписание
                 </a>
 
-                <a href="#" class="btn p-about__btn">Корпоративные тренинги</a>
+                <a href="/trainings/" class="btn p-about__btn">Корпоративные тренинги</a>
             </div>
         </div>
     </div>

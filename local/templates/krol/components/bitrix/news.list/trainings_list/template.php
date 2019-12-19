@@ -14,12 +14,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?php
-//echo '<pre>';
-//print_r($arResult["ITEMS"]);
-//echo '<pre>';
-//?>
-<?php if ($arResult["ITEMS"]): ?>
+
+<?php if (!empty($arResult["ITEMS"])): ?>
+
     <?php foreach ($arResult["ITEMS"] as $arItem): ?>
         <?php
         $trainerId = $arItem['DISPLAY_PROPERTIES']['COACH']['VALUE'];
@@ -27,9 +24,9 @@ $this->setFrameMode(true);
         <div class="training <?= $arItem["PROPERTIES"]["COLOR"]["VALUE"]; ?>">
             <div class="training__inner">
                 <span class="training__label"><?= $arItem["PROPERTIES"]["TYPE"]["VALUE"]; ?></span>
-                <a href="#" class="training__title"><?= $arItem["NAME"]; ?></a>
+                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="training__title"><?= $arItem["NAME"]; ?></a>
                 <p class="training__desc"><?= $arItem["PREVIEW_TEXT"]; ?></p>
-                <a href="#" class="training__more">Подробнее</a>
+                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="training__more">Подробнее</a>
 
                 <div class="training__info">
                     <div class="training-date">
@@ -80,4 +77,11 @@ $this->setFrameMode(true);
             </div>
         </div>
     <?php endforeach; ?>
+
+    <?php if (!empty($arResult['NAV_STRING'])): ?>
+        <?= $arResult['NAV_STRING'] ?>
+    <?php endif; ?>
+
 <?php endif; ?>
+
+

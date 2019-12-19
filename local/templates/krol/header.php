@@ -18,9 +18,6 @@ use Bitrix\Main\Page\Asset;
     CJSCore::Init(['jquery']);
 
     Asset::getInstance()->addJs(DEFAULT_TEMPLATE_PATH . '/assets/js/libs.js');
-    //Asset::getInstance()->addJs(DEFAULT_TEMPLATE_PATH . '/assets/js/script.js');
-    //Asset::getInstance()->addJs(DEFAULT_TEMPLATE_PATH . '/assets/js/main.js');
-    //$APPLICATION->AddHeadScript(DEFAULT_TEMPLATE_PATH . '/assets/js/script.js');
 
     Asset::getInstance()
         ->addString('<link rel="icon" type="image/x-icon" href="' . DEFAULT_TEMPLATE_PATH . '/assets/img/favicon.ico">');
@@ -60,7 +57,7 @@ use Bitrix\Main\Page\Asset;
         </div>
 
         <div class="header__logo">
-            <a href="#" class="logo">
+            <a href="<?= SITE_DIR ?>" class="logo">
                 <img src="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/logo.svg" class="logo__img" alt=""/>
             </a>
             <span class="header__desc">Мастерская коучинга <br/>и тренинга Леонида Кроля</span>
@@ -123,19 +120,114 @@ use Bitrix\Main\Page\Asset;
     </div>
 </header>
 
-<div class="wrapper">
-    <div class="container">
+<div
+        class="wrapper
+        <?= ($APPLICATION->GetCurDir() === '/contacts/') ? 'p-map' : ''; ?>
+        <?= ($APPLICATION->GetCurDir() === '/schedule/') ? 'p-schedule' : ''; ?>
+        <?= ($APPLICATION->GetCurDir() === '/trainings/') ? 'p-corp' : ''; ?>">
 
-            <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "top_navigate", Array(
-                "PATH" => "",	// Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
-                "SITE_ID" => "s1",	// Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
-                "START_FROM" => "0",	// Номер пункта, начиная с которого будет построена навигационная цепочка
+    <?php if (($APPLICATION->GetCurDir() === '/trainings/')): ?>
+    <div class="corp-head">
+    <?php endif; ?>
+
+    <?php if ($APPLICATION->GetCurDir() !== '/'): ?>
+        <div class="container <?= ($APPLICATION->GetCurDir() === '/contacts/') ? 'p-map__inner' : ''; ?>">
+            <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "top_navigate", Array(
+                "PATH" => "",
+                // Путь, для которого будет построена навигационная цепочка (по умолчанию, текущий путь)
+                "SITE_ID" => "s1",
+                // Cайт (устанавливается в случае многосайтовой версии, когда DOCUMENT_ROOT у сайтов разный)
+                "START_FROM" => "0",
+                // Номер пункта, начиная с которого будет построена навигационная цепочка
             ),
                 false
-            );?>
+            ); ?>
 
-        <h1 class="title title_h1 title_center title_blue p-about__title">
-            <?= $APPLICATION->ShowTitle(false); ?>
-        </h1>
+            <h1
+                    class="title title_h1 title_center
+                    <?= ($APPLICATION->GetCurDir() !== '/contacts/') ? 'title_blue p-about__title' : ''; ?>
+                    <?= ($APPLICATION->GetCurDir() === '/trainings/') ? 'title_white p-corp__title' : ''; ?>">
+                <?= $APPLICATION->ShowTitle(false); ?>
+            </h1>
 
-    </div>
+            <?php if ($APPLICATION->GetCurDir() === '/contacts/'): ?>
+                <div class="p-map__content">
+                    <div class="footer-cell footer-cell_large">
+                        <svg class="footer-cell__icon">
+                            <use xlink:href="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/icons.svg#icon-phone"></use>
+                        </svg>
+                        <a href="tel:<?= HREF_PHONE_VALUE; ?>" class="footer-cell__link"><?= CONTACTS_PHONE; ?></a>
+                    </div>
+
+                    <br>
+
+                    <div class="footer-cell">
+                        <svg class="footer-cell__icon">
+                            <use xlink:href="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/icons.svg#icon-mail"></use>
+                        </svg>
+                        <a href="mailto:info@leonidkroll.com" class="footer-cell__link"><?= CONTACTS_EMAIL; ?></a>
+                    </div>
+
+                    <br>
+
+                    <div class="footer-cell">
+                        <svg class="footer-cell__icon">
+                            <use xlink:href="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/icons.svg#icon-location"></use>
+                        </svg>
+                        <a href="mailto:info@leonidkroll.com" class="footer-cell__link">
+                            <?= CONTACTS_ADDRESS; ?>
+                        </a>
+                    </div>
+
+                    <ul class="social-list p-map__social">
+                        <li class="social-list__item">
+                            <a href="<?= CONTACTS_FACEBOOK; ?>" class="social-list__link social-list__link_fb">
+                                <svg class="social-list__icon social-list__icon_fb">
+                                    <use xlink:href="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/icons.svg#icon-fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="social-list__item">
+                            <a href="<?= CONTACTS_VK; ?>" class="social-list__link social-list__link_vk">
+                                <svg class="social-list__icon social-list__icon_vk">
+                                    <use xlink:href="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/icons.svg#icon-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="social-list__item">
+                            <a href="<?= CONTACTS_OK; ?>" class="social-list__link social-list__link_ok">
+                                <svg class="social-list__icon social-list__icon_ok">
+                                    <use xlink:href="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/img/icons.svg#icon-ok"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h5 class="title title_h5">Как добраться</h5>
+                    <p>
+                        <?= CONTACTS_WHERE; ?>
+                    </p>
+                </div>
+            <?php endif; ?>
+
+            <?php if ($APPLICATION->GetCurDir() === '/trainings/'): ?>
+                <div class="container container_little corp-head__content">
+                    <div class="corp-head__text">
+                        <p>
+                            <?= TRAININGS_DESC_TOP; ?>
+                        </p>
+                        <p>
+                            <?= TRAININGS_DESC_BOTTOM; ?>
+                        </p>
+                    </div>
+
+                    <img src="<?= DEFAULT_TEMPLATE_PATH; ?>/assets/pictures/corp-photo.jpg" class="corp-head__img" alt="" />
+                </div>
+            <?php endif; ?>
+        </div>
+        <?php if (($APPLICATION->GetCurDir() === '/trainings/')): ?>
+            </div>
+        <?php endif; ?>
+    <?php endif; ?>

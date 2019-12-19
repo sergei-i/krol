@@ -16,7 +16,8 @@ $this->setFrameMode(true);
 ?>
 
 <div class="container container_small p-trainers__content">
-    <?php if ($arResult["ITEMS"]): ?>
+
+    <?php if (!empty($arResult["ITEMS"])): ?>
         <?php foreach ($arResult["ITEMS"] as $arItem): ?>
             <div
                     class="trainer <?= $arItem['PROPERTIES']['COLOR']['VALUE']; ?> <?= $arItem['PROPERTIES']['RIGHT_BLOCK']['VALUE']; ?>">
@@ -62,5 +63,6 @@ $this->setFrameMode(true);
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
+
 </div>
 </div>

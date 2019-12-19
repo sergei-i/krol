@@ -28,22 +28,3 @@ $arElem = [
 if ($el->Add($arElem)) {
     echo json_encode(true);
 }
-
-
-
-/*$arEventFields = array(
-    'PERSON_NAME' => $_POST['name'],
-    'PERSON_MAIL' => $_POST['email'],
-    'PERSON_PHONE' => $_POST['phone'],
-    'RESPONSE_THEME' => 'Запись на тренинг №' . $_POST['trainer-id'] . ', клиент ' . $_POST['surname'] . ' ' . $_POST['name']
-);
-
-CEvent::Send("NEW_USER_ORDER", "s1", $arEventFields);*/
-
-/*echo '<pre>';
-print_r($el);
-echo '<pre>';
-
-echo '<pre>';
-print_r($_POST);
-echo '<pre>';*/
